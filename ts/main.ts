@@ -53,15 +53,28 @@ function displayNews(data: any) {
         content.className = 'news-content';
         content.textContent = article.description;
 
+        const urlArea = document.createElement('p');
+
         const url = document.createElement('a');
         url.className = 'news-url';
         url.href = article.url;
         url.textContent = article.source.name;
-        newsItem.appendChild(title);
+        urlArea.appendChild(url);
 
-        newsItem.appendChild(content);
+        const image = document.createElement('img');
+        image.className = 'news-image';
+        image.src = article.image;
+
+        const news = document.createElement('div');
+        news.className = 'news';
+
+        news.appendChild(title);
+        news.appendChild(content);
+        news.appendChild(urlArea);
+
+        newsItem.appendChild(image);
+        newsItem.appendChild(news);
         container.appendChild(newsItem);
-        content.appendChild(url);
     });
 }
 
@@ -71,10 +84,13 @@ function displayCoinGeckoData(crypto: any) {
     const coinData = document.createElement('li');
     coinData.className = 'coin-data';
 
+    const article =  document.createElement('article');
+    article.className = 'coin-article';
+
     const image = document.createElement('img');
     image.className = 'coin-image';
     image.src = crypto.image;
-    coinData.appendChild(image);
+    article.appendChild(image);
 
     const infoContainer = document.createElement('div');
     infoContainer.className = 'coin-info';
@@ -91,7 +107,8 @@ function displayCoinGeckoData(crypto: any) {
     currentPrice.textContent = `Current Price: ${formatLargeNumber(crypto.current_price)}`;
     infoContainer.appendChild(currentPrice);
 
-    coinData.appendChild(infoContainer);
+    article.appendChild(infoContainer);
+    coinData.appendChild(article);
     container.appendChild(coinData);
 }
 
