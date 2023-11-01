@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@900&display=swap');
 
+body, html {
+    overflow-x: hidden; /* 横スクロールを無効にする */
+}
+
 body {
     background-color: #1c2e35; /* ダークグレーの背景 */
     color: #ecf0f1; /* 明るいテキストカラー */
@@ -21,6 +25,15 @@ body {
     animation: neon2 1.5s ease-in-out infinite alternate;
 }
 
+.coin-data h2{
+    color: #17D4FE;
+    font-family: Orbitron;
+}
+
+.coin-data h2 :hover{
+    text-shadow: #0aafe6;
+}
+
 a {
     color: #17e4fe;
     text-decoration: none;
@@ -34,11 +47,11 @@ a:hover {
 
 @keyframes neon2 {
     from {
-        text-shadow: 0 0 10px #17D4FE, 0 0 20px #17D4FE, 0 0 30px #17D4FE, 0 0 40px #228dff,
+        text-shadow: 0 0 12px #17D4FE, 0 0 20px #17D4FE, 0 0 30px #17D4FE, 0 0 40px #228dff,
         0 0 70px #228dff, 0 0 80px #228dff, 0 0 100px #228dff, 0 0 150px #228dff;
     }
     to {
-        text-shadow: 0 0 5px #17D4FE, 0 0 10px #17D4FE, 0 0 15px #17D4FE, 0 0 20px #228dff,
+        text-shadow: 0 0 3px #17D4FE, 0 0 10px #17D4FE, 0 0 15px #17D4FE, 0 0 20px #228dff,
         0 0 35px #228dff, 0 0 40px #228dff, 0 0 50px #228dff, 0 0 75px #228dff;
     }
 }

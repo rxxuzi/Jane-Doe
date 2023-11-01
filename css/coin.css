@@ -1,0 +1,62 @@
+
+@keyframes scroll {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+
+.coin-container {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    overflow: hidden;
+    white-space: nowrap;
+    gap: 10px;
+
+    width: 200%; /* コンテンツの幅の2倍 */
+    animation: scroll 10s linear infinite;
+}
+
+.coin-data {
+    border: 1px solid #7f8c8d;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #34495e;
+}
+
+.coin-data:hover {
+    animation: glow 0.5s ease-in-out infinite;
+}
+
+.coin-image {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    transition: transform 0.5s, filter 0.5s;
+}
+
+.coin-image:hover {
+    transform: scale(1.1);
+    filter: brightness(1.2);
+}
+
+.coin-info {
+    flex-grow: 1;
+}
+
+@keyframes glow {
+    0% {
+        box-shadow: 0 0 5px #3498db;
+    }
+    50% {
+        box-shadow: 0 0 20px #3498db;
+    }
+    100% {
+        box-shadow: 0 0 5px #3498db;
+    }
+}
