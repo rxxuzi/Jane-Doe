@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@900&display=swap');
+
+body {
+    background-color: #1c2e35; /* ダークグレーの背景 */
+    color: #ecf0f1; /* 明るいテキストカラー */
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.the-title{
+    color: #17D4FE;
+    font-size: 60px;
+    font-family: Orbitron;
+    animation: neon2 1.5s ease-in-out infinite alternate;
+}
+
+a {
+    color: #1abc9c;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: #16a085;
+}
+
+
+@keyframes neon2 {
+    from {
+        text-shadow: 0 0 10px #17D4FE, 0 0 20px #17D4FE, 0 0 30px #17D4FE, 0 0 40px #228dff,
+        0 0 70px #228dff, 0 0 80px #228dff, 0 0 100px #228dff, 0 0 150px #228dff;
+    }
+    to {
+        text-shadow: 0 0 5px #17D4FE, 0 0 10px #17D4FE, 0 0 15px #17D4FE, 0 0 20px #228dff,
+        0 0 35px #228dff, 0 0 40px #228dff, 0 0 50px #228dff, 0 0 75px #228dff;
+    }
+}

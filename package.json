@@ -1,0 +1,12 @@
+{
+  "name": "jane-doe",
+  "version": "1.0.0",
+  "description": "1. CoinGecko API\r 2. WorldTimeAPI\r 3. GNews\r 4. Quodd API",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

@@ -1,0 +1,55 @@
+/* ニュース関連のコンテナ */
+.news-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.news-item {
+    background-color: #34495e;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.news-title {
+    color: #1abc9c;
+    font-size: 1.2em;
+    margin: 0 0 10px 0;
+}
+
+.news-content {
+    color: #7f8c8d;
+}
+
+.time-data {
+    animation: fadeIn 1s ease-in-out;
+}
+
+
+.coin-container {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.coin-data {
+    border: 1px solid #7f8c8d;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #34495e;
+}
+
+.coin-image {
+    width: 50px; /* またはお好みのサイズに */
+    height: 50px; /* またはお好みのサイズに */
+    border-radius: 50%;
+}
+
+.coin-info {
+    flex-grow: 1;
+}
+
