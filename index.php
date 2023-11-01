@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="css/container.css">
     <link rel="stylesheet" href="css/clock.css">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/coin.css">
     <title>JANE DOE</title>
 </head>
 <body>
@@ -21,6 +22,7 @@
 <div class="news-container"></div>
 
 <script src="js/main.js"></script>
-<script src="js/RealTime.js"></script>
+<script src="js/realTime.js"></script>
+<script src="js/coin.js"></script>
 </body>
 </html>
