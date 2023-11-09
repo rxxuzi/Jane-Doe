@@ -4,11 +4,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
 function fetchNews() {
     fetch('./../api_proxy.php')
-        .then(response => {
+        .then(async response => {
             if (!response.ok) {
-                return response.text().then(text => {
-                    throw new Error("HTTP error! Status: " + response.status + ", Body: " + text);
-                });
+                let text = await response.text();
+                throw new Error("HTTP error! Status: " + response.status + ", Body: " + text);
             }
             return response.json();
         })
