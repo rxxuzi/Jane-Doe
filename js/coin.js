@@ -17,7 +17,7 @@ function fetchCoinAPI() {
 }
 function displayCoinGeckoData(crypto) {
     const container = document.querySelector('.coin-container');
-    const coinData = document.createElement('li');
+    const coinData = document.createElement('div');
     coinData.className = 'coin-data';
     const article = document.createElement('article');
     article.className = 'coin-article';
@@ -40,7 +40,15 @@ function displayCoinGeckoData(crypto) {
     coinData.appendChild(article);
     container.appendChild(coinData);
 }
-const scrollSpeed = 50;
+const scrollSpeed = 500; // px / sec
 function setupInfiniteScroll() {
-    // TODO : 無限にスクロールするデザインの実装
+    const container = document.querySelector('.coin-container');
+    if (!container)
+        return;
+    // Clone the first and second elements to append to the end of the container
+    const coins = Array.from(container.children);
+    const firstCoinClone = coins[0].cloneNode(true);
+    const secondCoinClone = coins[1].cloneNode(true);
+    container.appendChild(firstCoinClone);
+    container.appendChild(secondCoinClone);
 }
