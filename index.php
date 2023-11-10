@@ -16,8 +16,9 @@
 <div class="container">
     <div class="time-container"></div>
     <div class="real-time"></div>
-    <ul class="coin-container"></ul>
 </div>
+
+<ul class="coin-container"></ul>
 
 <div class="news-container"></div>
 

@@ -13,13 +13,16 @@ function fetchCoinAPI() {
         .then(data => {
             console.log(data);
             data.forEach((crypto: any) => displayCoinGeckoData(crypto));
-            setupInfiniteScroll();
+            mkList();
         })
         .catch(error => console.error('Error:', error));
 }
 
 function displayCoinGeckoData(crypto: any) {
     const container = document.querySelector('.coin-container') as HTMLElement;
+
+    const coinList = document.createElement('li');
+    coinList.className = 'coin-list';
 
     const coinData = document.createElement('div');
     coinData.className = 'coin-data';
@@ -49,21 +52,22 @@ function displayCoinGeckoData(crypto: any) {
 
     article.appendChild(infoContainer);
     coinData.appendChild(article);
-    container.appendChild(coinData);
+    coinList.appendChild(coinData);
+    container.appendChild(coinList);
 }
 
-const scrollSpeed: number = 500; // px / sec
-
-function setupInfiniteScroll() {
+function mkList(){
     const container = document.querySelector('.coin-container') as HTMLElement;
     if (!container) return;
 
-    // Clone the first and second elements to append to the end of the container
+    // コンテナの子要素をすべて取得
     const coins = Array.from(container.children);
-    const firstCoinClone = coins[0].cloneNode(true);
-    const secondCoinClone = coins[1].cloneNode(true);
 
-    container.appendChild(firstCoinClone);
-    container.appendChild(secondCoinClone);
+    // 各要素をクローンしてコンテナの最後に追加
+    coins.forEach((coin) => {
+        const coinClone = coin.cloneNode(true);
+        container.appendChild(coinClone);
+    });
 }
+
 
