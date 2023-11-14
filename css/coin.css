@@ -1,11 +1,7 @@
-@keyframes scroll {
-    0%   {
-        transform: translateX(0);
-    }
-    100%  {
-        transform: translateX(calc((-220px + 10) * 10));
-    /*    (list width + padding) * index */
-    }
+.ticker{
+    width: 750%;
+    display: flex;
+    animation: scroll-infinite 10s linear infinite;
 }
 
 .coin-container {
@@ -16,8 +12,7 @@
     white-space: nowrap;
     gap: 10px;
 
-    width: 750%;
-    animation: scroll 10s linear infinite;
+
 }
 
 .coin-list{
@@ -62,5 +57,14 @@
     }
     100% {
         box-shadow: 0 0 5px #3498db;
+    }
+}
+
+@keyframes scroll-infinite {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(calc((-220px + 10) * 10));
     }
 }
