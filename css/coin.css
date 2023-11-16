@@ -1,8 +1,33 @@
+@keyframes loop {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(calc((-220px + 10) * 10));
+    }
+}
+
 .ticker{
     width: 750%;
     display: flex;
-    animation: scroll-infinite 10s linear infinite;
+    /*animation: loop 10s linear infinite;*/
+    animation: loop 10s linear infinite 1s both;
 }
+
+@keyframes scroll-horizontal {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-2300px);
+    }
+}
+
+.coin-container {
+    animation: scroll-horizontal 10s linear infinite;
+}
+
+
 
 .coin-container {
     list-style-type: none;
@@ -11,8 +36,6 @@
     overflow: hidden;
     white-space: nowrap;
     gap: 10px;
-
-
 }
 
 .coin-list{
@@ -24,7 +47,7 @@
     border-radius: 5px;
     padding: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    background-color: #34495e;
+    background-color: rgba(25, 36, 50 , 0.9);
 }
 
 .coin-data:hover {
@@ -60,11 +83,3 @@
     }
 }
 
-@keyframes scroll-infinite {
-    0% {
-        transform: translateX(0);
-    }
-    100% {
-        transform: translateX(calc((-220px + 10) * 10));
-    }
-}
