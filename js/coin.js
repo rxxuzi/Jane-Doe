@@ -16,7 +16,10 @@ function fetchCoinAPI() {
         .catch(error => console.error('Error:', error));
 }
 function displayCoinGeckoData(crypto) {
-    const container = document.querySelector('.coin-container');
+    const container = document.querySelector('.ticker');
+    if (!container)
+        return;
+    const coinUL = document.querySelector('.coin-container');
     const coinList = document.createElement('li');
     coinList.className = 'coin-list';
     const coinData = document.createElement('div');
@@ -41,7 +44,14 @@ function displayCoinGeckoData(crypto) {
     article.appendChild(infoContainer);
     coinData.appendChild(article);
     coinList.appendChild(coinData);
-    container.appendChild(coinList);
+    coinUL.appendChild(coinList);
+    container.appendChild(coinUL);
+    coinList.addEventListener('click', () => {
+        showCoinInfo(crypto);
+    });
+}
+function showCoinInfo(crypto) {
+    window.open(`https://www.google.com/search?q=${crypto.name}+cryptocurrency+transactions`);
 }
 function mkList() {
     const container = document.querySelector('.coin-container');

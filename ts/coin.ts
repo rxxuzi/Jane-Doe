@@ -19,7 +19,11 @@ function fetchCoinAPI() {
 }
 
 function displayCoinGeckoData(crypto: any) {
-    const container = document.querySelector('.coin-container') as HTMLElement;
+    const container = document.querySelector('.ticker') as HTMLElement;
+    if (!container) return;
+
+    const coinUL = document.querySelector('.coin-container') as HTMLElement;
+
 
     const coinList = document.createElement('li');
     coinList.className = 'coin-list';
@@ -53,7 +57,15 @@ function displayCoinGeckoData(crypto: any) {
     article.appendChild(infoContainer);
     coinData.appendChild(article);
     coinList.appendChild(coinData);
-    container.appendChild(coinList);
+    coinUL.appendChild(coinList);
+    container.appendChild(coinUL);
+
+    coinList.addEventListener('click', () => {
+        showCoinInfo(crypto);
+    });
+}
+function showCoinInfo(crypto: any) {
+    window.open(`https://www.google.com/search?q=${crypto.name}+current+rate`);
 }
 
 function mkList(){
