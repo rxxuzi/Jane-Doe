@@ -51,7 +51,7 @@ function displayCoinGeckoData(crypto) {
     });
 }
 function showCoinInfo(crypto) {
-    window.open(`https://www.google.com/search?q=${crypto.name}+cryptocurrency+transactions`);
+    window.open(`https://www.google.com/search?q=${crypto.name}+current+rate`);
 }
 function mkList() {
     const container = document.querySelector('.coin-container');

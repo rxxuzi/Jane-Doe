@@ -20,6 +20,11 @@
     color: #ecf0f1;
 }
 
+.news-item a :hover{
+    animation: glow 0.5s ease-in-out infinite;
+    filter: brightness(1.2);
+}
+
 @keyframes bounceIn {
     0% {
         opacity: 0;
@@ -75,7 +80,6 @@
 .news-link:hover {
     color: #2980b9;
 }
-
 
 .time-data {
     animation: fadeIn 1s ease-in-out;

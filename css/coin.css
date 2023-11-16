@@ -1,17 +1,6 @@
-@keyframes loop {
-    0% {
-        transform: translateX(0);
-    }
-    100% {
-        transform: translateX(calc((-220px + 10) * 10));
-    }
-}
-
 .ticker{
     width: 750%;
     display: flex;
-    /*animation: loop 10s linear infinite;*/
-    animation: loop 10s linear infinite 1s both;
 }
 
 @keyframes scroll-horizontal {
@@ -24,7 +13,7 @@
 }
 
 .coin-container {
-    animation: scroll-horizontal 10s linear infinite;
+    animation: scroll-horizontal 17s linear infinite;
 }
 
 
