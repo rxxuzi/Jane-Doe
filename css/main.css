@@ -44,6 +44,7 @@ canvas{
     font-size: 60px;
     font-family: Orbitron;
     animation: neon2 1.5s ease-in-out infinite alternate;
+    margin: 12px;
 }
 
 .coin-data h2{

@@ -11,6 +11,8 @@
 </head>
 <body>
 
+<h1 class="the-title">皇国義勇軍【七生報国】😤🤚</h1>
+
 <div class="container">
     <div class="time-container"></div>
     <div class="real-time"></div>
@@ -25,6 +27,12 @@
 <script src="js/main.js"></script>
 <script src="js/realTime.js"></script>
 <script src="js/coin.js"></script>
+
+<script src="https://www.amcharts.com/lib/4/core.js"></script>
+<script src="https://www.amcharts.com/lib/4/maps.js"></script>
+<script src="https://www.amcharts.com/lib/4/geodata/worldTimeZoneAreasHigh.js"></script>
+<script src="https://www.amcharts.com/lib/4/geodata/worldTimeZonesHigh.js"></script>
+<script src="https://www.amcharts.com/lib/4/themes/animated.js"></script>
 
 <?php
     include 'animation.php';
